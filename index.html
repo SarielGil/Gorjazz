@@ -3,154 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GorJazz | מופע מחווה לגדולי זמרות הג'אז</title>
-    <meta name="description" content="GorJazz - הרכב ג'אז ווקאלי המשלב את קול הנשמה של ענבל הנסב עם נגינת הגיטרה של נדב זיו. מופעי מחווה מרגשים לקלאסיקות הג'אז הגדולות.">
+    <title>GorJazz | Inbal Hanasab & Nadav Ziv</title>
+    <meta name="description" content="GorJazz - דואו ג'אז ווקאלי המפגיש בין השירה של ענבל הנסב לגיטרה של נדב זיו. מופעי מחווה לקלאסיקות הג'אז הגדולות.">
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     
     <style>
         body {
             font-family: 'Assistant', sans-serif;
-            background-color: #0a0a0a;
-            color: #e5e5e5;
+            background-color: #fcfaf7; /* Warm Paper Background */
+            color: #2d2d2d; /* Deep Charcoal Text */
         }
         .serif {
             font-family: 'Playfair Display', serif;
         }
-        .jazz-gold {
-            color: #c5a059;
+        .accent-brass {
+            color: #8e735b;
         }
-        .bg-jazz-gold {
-            background-color: #c5a059;
+        .bg-accent-brass {
+            background-color: #8e735b;
         }
-        .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/img/hero-jazz.jpg');
-            background-size: cover;
-            background-position: center;
+        .hero-section {
+            background-color: #f4f1ea;
+            border-bottom: 1px solid #e5e1d8;
+        }
+        .insta-container {
+            max-width: 540px;
+            margin: 0 auto;
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold serif jazz-gold tracking-widest uppercase">GorJazz</a>
-            <div class="hidden md:flex space-x-reverse space-x-8 font-medium">
-                <a href="#about" class="hover:jazz-gold transition">אודות</a>
-                <a href="#music" class="hover:jazz-gold transition">מוזיקה</a>
-                <a href="#shows" class="hover:jazz-gold transition">הופעות</a>
-                <a href="#contact" class="bg-jazz-gold text-black px-4 py-2 rounded hover:bg-white transition text-sm">הזמנת מופע</a>
+    <nav class="sticky top-0 w-full z-50 bg-[#fcfaf7]/90 backdrop-blur-sm border-b border-[#e5e1d8]">
+        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold serif tracking-wider uppercase opacity-90">GorJazz</a>
+            <div class="hidden md:flex space-x-reverse space-x-10 font-medium text-sm tracking-widest uppercase">
+                <a href="#about" class="hover:opacity-60 transition">אודות</a>
+                <a href="#instagram" class="hover:opacity-60 transition">אינסטגרם</a>
+                <a href="#music" class="hover:opacity-60 transition">מוזיקה</a>
+                <a href="#contact" class="hover:opacity-60 transition">צרו קשר</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="h-screen flex items-center justify-center text-center hero-bg">
-        <div class="max-w-4xl px-6">
-            <h1 class="text-6xl md:text-8xl font-bold serif mb-6 tracking-tight">קול הנשמה של ה<span class="jazz-gold italic">ג'אז</span></h1>
-            <p class="text-xl md:text-2xl opacity-90 mb-10 font-light leading-relaxed">
-                ענבל הנסב ונדב זיו במסע מוזיקלי בעקבות הזמרות הגדולות שעיצבו את ההיסטוריה.
+    <header class="py-24 md:py-40 hero-section">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <span class="serif italic text-xl opacity-60 mb-4 block">Inbal Hanasab & Nadav Ziv</span>
+            <h1 class="text-5xl md:text-7xl font-bold serif mb-8 leading-tight">קול הנשמה של ה<span class="accent-brass italic">ג'אז</span></h1>
+            <p class="text-xl md:text-2xl opacity-80 mb-12 font-light leading-relaxed max-w-2xl mx-auto">
+                מסע מוזיקלי אקוסטי בעקבות הזמרות הגדולות שעיצבו את ההיסטוריה. עיבודים אינטימיים לשירים שתמיד נשארים בלב.
             </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#music" class="bg-jazz-gold text-black px-8 py-4 rounded-full text-lg font-bold hover:bg-white transition">האזינו לנו</a>
-                <a href="#contact" class="border border-white/30 px-8 py-4 rounded-full text-lg font-bold hover:bg-white/10 transition">לתיאום מופע</a>
+            <div class="flex flex-col md:flex-row gap-6 justify-center">
+                <a href="#instagram" class="bg-[#2d2d2d] text-[#fcfaf7] px-10 py-4 rounded-full text-lg font-medium hover:opacity-90 transition">הצצה להופעות</a>
+                <a href="https://wa.me/972545774407" class="border border-[#2d2d2d]/20 px-10 py-4 rounded-full text-lg font-medium hover:bg-[#2d2d2d]/5 transition">תיאום מופע</a>
             </div>
         </div>
     </header>
 
     <!-- About Section -->
-    <section id="about" class="py-24 bg-zinc-900">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div class="relative">
-                <div class="aspect-[4/5] bg-zinc-800 rounded-2xl overflow-hidden border border-white/10">
-                    <!-- Placeholder for Duo Image -->
-                    <div class="w-full h-full flex items-center justify-center text-zinc-600 serif italic text-xl">
-                        Inbal & Nadav Portrait
-                    </div>
-                </div>
-                <div class="absolute -bottom-6 -left-6 bg-jazz-gold p-8 rounded-2xl hidden md:block">
-                    <p class="text-black font-bold serif text-2xl italic">"A tribute to the icons."</p>
-                </div>
-            </div>
+    <section id="about" class="py-32">
+        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
             <div class="text-right">
-                <h2 class="text-4xl md:text-5xl font-bold serif mb-8 jazz-gold">סיפור של חיבור</h2>
+                <h2 class="text-4xl serif mb-10 accent-brass">סיפור של חיבור</h2>
                 <p class="text-lg opacity-80 mb-6 leading-relaxed">
                     GorJazz הוא דואו מוזיקלי המפגיש בין השירה העמוקה והמרגשת של ענבל הנסב לבין נגינת הגיטרה הווירטואוזית של נדב זיו. 
                 </p>
-                <p class="text-lg opacity-80 mb-8 leading-relaxed">
-                    ההרכב נולד מתוך אהבה משותפת לקלאסיקות הג'אז של שנות ה-30, ה-40 וה-50, ומהרצון לחלוק כבוד לזמרות האגדיות כמו אלה פיצג'רלד, בילי הולידיי ושרה וון. המופע משלב עיבודים אינטימיים וחדשניים שמביאים את ניחוח המועדונים של ניו יורק ופריז היישר לבמה שלכם.
+                <p class="text-lg opacity-80 mb-10 leading-relaxed">
+                    ההרכב נולד מתוך אהבה משותפת לקלאסיקות הג'אז של שנות ה-30, ה-40 וה-50, ומהרצון לחלוק כבוד לזמרות האגדיות כמו אלה פיצג'רלד, בילי הולידיי ושרה וון.
                 </p>
-                <div class="flex gap-8">
+                <div class="border-t border-[#e5e1d8] pt-10 grid grid-cols-2 gap-6">
                     <div>
-                        <h4 class="text-2xl font-bold jazz-gold serif">ענבל הנסב</h4>
-                        <p class="text-sm opacity-60">שירה ופרפורמנס</p>
+                        <h4 class="font-bold serif text-xl mb-1">ענבל הנסב</h4>
+                        <p class="text-sm opacity-50 uppercase tracking-tighter">Vocals</p>
                     </div>
                     <div>
-                        <h4 class="text-2xl font-bold jazz-gold serif">נדב זיו</h4>
-                        <p class="text-sm opacity-60">גיטרה ועיבודים</p>
+                        <h4 class="font-bold serif text-xl mb-1">נדב זיו</h4>
+                        <p class="text-sm opacity-50 uppercase tracking-tighter">Guitar & Arrangements</p>
                     </div>
                 </div>
+            </div>
+            <div class="bg-[#f4f1ea] aspect-[4/5] rounded-lg border border-[#e5e1d8] flex items-center justify-center italic text-[#8e735b]/40 serif text-xl">
+                Photo: Inbal & Nadav
             </div>
         </div>
     </section>
 
-    <!-- Music Section -->
-    <section id="music" class="py-24 bg-black">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold serif mb-16 jazz-gold">האזינו לצלילים</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Music Item Placeholder -->
-                <div class="bg-zinc-900 p-8 rounded-3xl border border-white/5 hover:border-jazz-gold/50 transition group">
-                    <div class="w-16 h-16 bg-jazz-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-jazz-gold transition">
-                        <span class="text-2xl group-hover:text-black">▶</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Summertime</h3>
-                    <p class="text-sm opacity-50">Live Tribute Performance</p>
+    <!-- Instagram Feed Section -->
+    <section id="instagram" class="py-32 bg-[#f4f1ea]/50 border-y border-[#e5e1d8]">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl serif mb-4 accent-brass">מהאינסטגרם שלנו</h2>
+            <p class="text-lg opacity-60 mb-16">רגעים מהופעות, חזרות והשראות</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-12 items-start justify-center">
+                <!-- Post 1 -->
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-[#e5e1d8]">
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/gorjazz_duo/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
                 </div>
-                <div class="bg-zinc-900 p-8 rounded-3xl border border-white/5 hover:border-jazz-gold/50 transition group">
-                    <div class="w-16 h-16 bg-jazz-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-jazz-gold transition">
-                        <span class="text-2xl group-hover:text-black">▶</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">My Funny Valentine</h3>
-                    <p class="text-sm opacity-50">Studio Session</p>
+                <!-- Post 2 -->
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-[#e5e1d8]">
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DEv_xLgtL-E/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
                 </div>
-                <div class="bg-zinc-900 p-8 rounded-3xl border border-white/5 hover:border-jazz-gold/50 transition group">
-                    <div class="w-16 h-16 bg-jazz-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-jazz-gold transition">
-                        <span class="text-2xl group-hover:text-black">▶</span>
+            </div>
+            
+            <div class="mt-16">
+                <a href="https://www.instagram.com/gorjazz_duo" target="_blank" class="serif italic text-2xl hover:accent-brass transition decoration-brass underline underline-offset-8">
+                    @gorjazz_duo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music/Audio Section -->
+    <section id="music" class="py-32">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl serif mb-16 accent-brass text-center">האזינו לצלילים</h2>
+            <div class="space-y-12">
+                <div class="flex flex-col md:flex-row items-center gap-10 bg-white p-8 rounded-2xl border border-[#e5e1d8]">
+                    <div class="w-20 h-20 bg-[#f4f1ea] rounded-full flex items-center justify-center text-2xl accent-brass serif">01</div>
+                    <div class="flex-1 text-right">
+                        <h3 class="text-2xl font-bold serif mb-1">Summertime</h3>
+                        <p class="opacity-50">Live Tribute Performance</p>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Feeling Good</h3>
-                    <p class="text-sm opacity-50">Live at Felicia Blumenthal</p>
+                    <div class="w-full md:w-auto">
+                        <div class="h-1 bg-[#f4f1ea] rounded-full overflow-hidden">
+                            <div class="w-1/3 h-full bg-accent-brass"></div>
+                        </div>
+                    </div>
                 </div>
+                <!-- More items can be added here -->
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-zinc-900 border-t border-white/5">
+    <section id="contact" class="py-32 bg-[#2d2d2d] text-[#fcfaf7]">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold serif mb-8 jazz-gold">צרו איתנו קשר</h2>
-            <p class="text-xl opacity-70 mb-12">הופעות פרטיות, אירועי חברה ומופעי תרבות. אנחנו זמינים לכל פנייה.</p>
+            <h2 class="text-4xl md:text-5xl serif mb-8 tracking-tight">להזמנת מופע</h2>
+            <p class="text-xl opacity-70 mb-16 font-light">אנחנו זמינים להופעות פרטיות, אירועי חברה ומופעי תרבות אינטימיים.</p>
             
-            <div class="flex flex-col md:flex-row gap-8 justify-center items-center">
-                <a href="https://wa.me/972545774407" class="flex items-center gap-3 text-2xl font-bold hover:jazz-gold transition">
-                    <span class="text-3xl">💬</span>
-                    וואטסאפ: 054-5774407
+            <div class="flex flex-col md:flex-row gap-12 justify-center items-center">
+                <a href="https://wa.me/972545774407" class="group">
+                    <span class="block text-3xl font-bold mb-2 group-hover:accent-brass transition">054-5774407</span>
+                    <span class="text-sm opacity-50 uppercase tracking-widest">וואטסאפ</span>
                 </a>
-                <span class="hidden md:block opacity-20">|</span>
-                <a href="mailto:inbal.ph@gmail.com" class="flex items-center gap-3 text-2xl font-bold hover:jazz-gold transition">
-                    <span class="text-3xl">✉️</span>
-                    inbal.ph@gmail.com
+                <div class="hidden md:block w-px h-12 bg-white/10"></div>
+                <a href="mailto:inbal.ph@gmail.com" class="group">
+                    <span class="block text-3xl font-bold mb-2 group-hover:accent-brass transition">inbal.ph@gmail.com</span>
+                    <span class="text-sm opacity-50 uppercase tracking-widest">דוא"ל</span>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 border-t border-white/5 text-center">
-        <p class="serif jazz-gold text-xl mb-4 uppercase tracking-widest">GorJazz</p>
-        <p class="text-sm opacity-40">© 2026 כל הזכויות שמורות לענבל הנסב ונדב זיו</p>
+    <footer class="py-12 text-center text-xs opacity-40 uppercase tracking-[0.2em]">
+        <p>© 2026 GorJazz. Inbal Hanasab & Nadav Ziv</p>
     </footer>
 
+    <!-- Instagram Script -->
+    <script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
