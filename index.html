@@ -3,52 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GorJazz Duo | Elegant Live Music for Weddings & Events</title>
-    <meta name="description" content="GorJazz Duo - Inbal Hanasab & Nadav Ziv. Providing a soulful, sophisticated soundtrack for wedding receptions and intimate events.">
+    <title>GorJazz Duo | Elegant Live Music for Boutique Weddings & Events</title>
+    <meta name="description" content="Inbal Hanasab & Nadav Ziv provide a soulful, sophisticated acoustic soundtrack for wedding receptions, galleries, and corporate events. High-end jazz, soul, and classics.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@200;400;500&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --bg: #fdfcfb;
-            --text: #1c1c1c;
-            --accent: #a68a64;
-            --muted: #7a7a7a;
+            --bg: #ffffff;
+            --text: #111111;
+            --accent: #9a8069;
+            --light-gray: #f7f7f7;
+            --border: #eeeeee;
         }
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg);
             color: var(--text);
             -webkit-font-smoothing: antialiased;
+            letter-spacing: -0.01em;
         }
         .serif { font-family: 'Playfair Display', serif; }
         
+        /* Modern Minimalist Navigation */
         .nav-link {
-            font-size: 11px;
-            letter-spacing: 0.2em;
+            font-size: 10px;
+            letter-spacing: 0.3em;
             text-transform: uppercase;
-            font-weight: 600;
-            color: var(--muted);
-            transition: color 0.3s ease;
+            font-weight: 500;
+            color: #666;
+            transition: all 0.3s ease;
         }
         .nav-link:hover { color: var(--accent); }
 
-        .btn-minimal {
+        /* Bespoke Minimalist Buttons */
+        .btn-modern {
             display: inline-block;
-            padding: 18px 42px;
+            padding: 20px 48px;
             border: 1px solid var(--text);
-            font-size: 12px;
-            letter-spacing: 0.15em;
+            font-size: 11px;
+            letter-spacing: 0.25em;
             text-transform: uppercase;
-            font-weight: 600;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            font-weight: 500;
+            transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+            background: transparent;
         }
-        .btn-minimal:hover {
+        .btn-modern:hover {
             background-color: var(--text);
-            color: var(--bg);
+            color: white;
             transform: translateY(-2px);
         }
         .btn-accent {
@@ -57,174 +62,200 @@
         }
         .btn-accent:hover {
             background-color: var(--accent);
-            color: #fff;
-            border-color: var(--accent);
+            color: white;
         }
 
-        .img-reveal {
+        /* Image Display */
+        .img-frame {
             overflow: hidden;
+            background-color: var(--light-gray);
         }
-        .img-reveal img {
-            transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        .img-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
         }
-        .img-reveal:hover img {
-            transform: scale(1.05);
+        .img-frame:hover img {
+            transform: scale(1.03);
         }
 
-        section { padding: 120px 0; }
-        @media (max-width: 768px) { section { padding: 80px 0; } }
+        /* Spacing & Layout */
+        section { padding: 160px 0; }
+        @media (max-width: 768px) { 
+            section { padding: 100px 0; }
+            .hero-title { font-size: 3.5rem !important; }
+        }
+
+        .line-accent {
+            width: 40px;
+            height: 1px;
+            background-color: var(--accent);
+            margin: 24px 0;
+        }
+
+        /* Smooth Scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #fff; }
+        ::-webkit-scrollbar-thumb { background: #ddd; }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-[#fdfcfb]/80 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
+    <!-- Header / Nav -->
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-[#f0f0f0]">
+        <div class="max-w-7xl mx-auto px-10 py-8 flex justify-between items-center">
             <a href="index.html" class="serif text-2xl font-bold tracking-tight">GorJazz</a>
             <div class="hidden md:flex space-x-12">
-                <a href="#about" class="nav-link">Our Story</a>
-                <a href="#weddings" class="nav-link">Weddings</a>
+                <a href="#about" class="nav-link">Duo</a>
+                <a href="#events" class="nav-link">Events</a>
                 <a href="#media" class="nav-link">Listen</a>
-                <a href="#contact" class="nav-link text-accent">Bookings</a>
+                <a href="#contact" class="nav-link" style="color: var(--accent);">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="min-h-screen flex items-center pt-32 pb-20 px-8">
-        <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-16 items-center">
-            <div class="lg:col-span-5 text-left">
-                <span class="text-accent text-[10px] font-bold tracking-[0.3em] uppercase mb-6 block">Inbal Hanasab & Nadav Ziv</span>
-                <h1 class="serif text-6xl md:text-8xl font-bold leading-[0.9] mb-10 tracking-tighter">
-                    Soulful Music for <br><span class="italic text-accent">Beautiful Moments.</span>
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center pt-40 pb-20 px-10">
+        <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-24 items-center">
+            <div class="lg:col-span-5">
+                <span class="text-accent text-[10px] font-bold tracking-[0.4em] uppercase mb-8 block">Inbal Hanasab & Nadav Ziv</span>
+                <h1 class="hero-title serif text-6xl md:text-[6.5rem] font-bold leading-[0.95] mb-12 tracking-tighter">
+                    Soulful <br>Acoustic <br><span class="italic text-accent">Elegance.</span>
                 </h1>
-                <p class="text-lg text-muted font-light leading-relaxed mb-12 max-w-md">
-                    Elevating your celebration with a sophisticated acoustic blend of Jazz, Soul, and timeless classics.
+                <p class="text-xl text-neutral-400 font-light leading-relaxed mb-16 max-w-sm">
+                    Providing a sophisticated, intimate soundtrack for high-end wedding receptions and private boutique events.
                 </p>
-                <div class="flex flex-wrap gap-6">
-                    <a href="#contact" class="btn-minimal">Reserve Your Date</a>
-                    <a href="#media" class="btn-minimal btn-accent">Watch Live</a>
+                <div class="flex flex-wrap gap-8">
+                    <a href="#contact" class="btn-modern">Inquire Now</a>
+                    <a href="#media" class="btn-modern btn-accent">Watch Live</a>
                 </div>
             </div>
             <div class="lg:col-span-7">
-                <div class="img-reveal rounded-sm shadow-2xl">
-                    <img src="assets/img/duo-urban.jpg" alt="GorJazz Duo Urban Session" class="w-full h-auto grayscale hover:grayscale-0">
+                <div class="img-frame aspect-[14/10] shadow-2xl">
+                    <img src="assets/img/duo-urban.jpg" alt="GorJazz Duo - Inbal Hanasab singing and Nadav Ziv playing guitar on urban tracks.">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="bg-white border-y border-neutral-100 px-8">
-        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-            <div class="img-reveal shadow-xl">
-                <img src="assets/img/duo-stairs.jpg" alt="GorJazz Duo Intimate Connection" class="w-full h-auto">
+    <!-- About Section -->
+    <section id="about" class="bg-neutral-50 px-10">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-32 items-center">
+            <div class="img-frame aspect-[3/4] shadow-xl order-2 md:order-1">
+                <img src="assets/img/duo-stairs.jpg" alt="Inbal and Nadav in an intimate performance setting on stone stairs.">
             </div>
-            <div class="text-left">
-                <span class="text-accent text-[10px] font-bold tracking-[0.3em] uppercase mb-6 block">The Story</span>
-                <h2 class="serif text-5xl mb-8">A Dialogue of <br><span class="italic text-accent">Voice & String</span></h2>
-                <div class="space-y-6 text-muted leading-relaxed font-light text-lg">
+            <div class="order-1 md:order-2">
+                <div class="line-accent"></div>
+                <h2 class="serif text-5xl md:text-7xl mb-12">The <br><span class="italic text-accent">Duo</span></h2>
+                <div class="space-y-8 text-neutral-500 font-light text-xl leading-relaxed">
                     <p>
-                        GorJazz is a musical conversation between the mesmerizing vocals of <span class="text-text font-normal">Inbal Hanasab</span> and the virtuosic guitar play of <span class="text-text font-normal">Nadav Ziv</span>.
+                        GorJazz is the mesmerizing intersection of <span class="text-black font-normal">Inbal Hanasab's</span> soulful vocals and <span class="text-black font-normal">Nadav Ziv's</span> virtuosic acoustic guitar.
                     </p>
                     <p>
-                        Specializing in intimate acoustic interpretations of Jazz icons—from Ella Fitzgerald to Billie Holiday—we create a refined atmosphere where every note is carefully chosen to touch the heart.
+                        Born from a shared love for the golden era of Jazz, we re-imagine the classics of Ella Fitzgerald, Billie Holiday, and Nina Simone with a modern, minimalist touch that feels both timeless and fresh.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Wedding Focus -->
-    <section id="weddings" class="px-8 bg-neutral-50">
-        <div class="max-w-4xl mx-auto text-center">
-            <span class="text-accent text-[10px] font-bold tracking-[0.3em] uppercase mb-6 block">Services</span>
-            <h2 class="serif text-5xl md:text-7xl mb-10">The Perfect <br><span class="italic text-accent">Reception</span></h2>
-            <p class="text-xl text-muted font-light leading-relaxed mb-16 max-w-2xl mx-auto">
-                Imagine your guests arriving to the warm, inviting sound of a live jazz duo. Our music is designed to be the elegant backdrop to your most important day—present enough to inspire, yet gentle enough to encourage conversation.
-            </p>
-            <div class="grid md:grid-cols-3 gap-12 text-left">
-                <div>
-                    <h4 class="serif text-xl mb-4 border-b border-accent/20 pb-2">Atmosphere</h4>
-                    <p class="text-sm text-muted leading-relaxed">Providing a high-end "Boutique" feel that stock DJs or large bands simply can't match.</p>
-                </div>
-                <div>
-                    <h4 class="serif text-xl mb-4 border-b border-accent/20 pb-2">Curation</h4>
-                    <p class="text-sm text-muted leading-relaxed">A tailored playlist of Jazz standards, Bossa Nova, and Soulful re-interpretations.</p>
-                </div>
-                <div>
-                    <h4 class="serif text-xl mb-4 border-b border-accent/20 pb-2">Simplicity</h4>
-                    <p class="text-sm text-muted leading-relaxed">A minimalist setup that fits any space, from garden ceremonies to luxury hotel lounges.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Media -->
-    <section id="media" class="px-8 bg-white">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-20">
-                <span class="text-accent text-[10px] font-bold tracking-[0.3em] uppercase mb-6 block">Media</span>
-                <h2 class="serif text-5xl">Live From the Stage</h2>
+    <!-- Boutique Events -->
+    <section id="events" class="px-10">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-32">
+                <span class="text-accent text-[10px] font-bold tracking-[0.4em] uppercase mb-8 block">Experience</span>
+                <h2 class="serif text-5xl md:text-8xl">Boutique <br><span class="italic text-accent">Reception.</span></h2>
             </div>
             
-            <div class="grid lg:grid-cols-2 gap-12 items-start">
-                <div class="space-y-12">
-                    <div class="relative pt-[56.25%] bg-neutral-100 rounded-sm overflow-hidden shadow-lg border border-neutral-100">
-                        <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/videoseries?list=PLzW0Tq9S0y_4X_1B-V3S-LhBv7G6T9Y6G" frameborder="0" allowfullscreen></iframe>
+            <div class="grid md:grid-cols-2 gap-24 items-start">
+                <div class="space-y-16">
+                    <div class="border-l border-accent/30 pl-10 py-2">
+                        <h4 class="serif text-2xl mb-4">Atmosphere</h4>
+                        <p class="text-neutral-400 font-light leading-relaxed">Sophisticated, warm, and inviting. We set the tone for your guests' arrival without overpowering the conversation.</p>
                     </div>
-                    <div class="text-left">
-                        <h3 class="serif text-2xl mb-4">YouTube Channel</h3>
-                        <p class="text-muted font-light mb-6">Explore our full repertoire of live sessions and studio recordings.</p>
-                        <a href="https://youtube.com/@gorjazz_duo" target="_blank" class="text-xs font-bold tracking-widest uppercase border-b-2 border-accent pb-1">View Full Channel</a>
+                    <div class="border-l border-accent/30 pl-10 py-2">
+                        <h4 class="serif text-2xl mb-4">Curation</h4>
+                        <p class="text-neutral-400 font-light leading-relaxed">A tailored repertoire of Jazz standards, Bossa Nova, and Soulful re-interpretations of modern classics.</p>
                     </div>
                 </div>
+                <div class="space-y-16 md:mt-24">
+                    <div class="border-l border-accent/30 pl-10 py-2">
+                        <h4 class="serif text-2xl mb-4">Versatility</h4>
+                        <p class="text-neutral-400 font-light leading-relaxed">From lush garden ceremonies to luxury hotel lounges, our minimalist setup adapts to any refined space.</p>
+                    </div>
+                    <div class="bg-neutral-900 p-12 text-white">
+                        <h4 class="serif text-2xl mb-6 italic text-accent">Recent Venues</h4>
+                        <ul class="text-xs tracking-[0.2em] space-y-4 uppercase font-bold opacity-60">
+                            <li>Tel Aviv Museum of Art</li>
+                            <li>The Norman Hotel</li>
+                            <li>Felicia Blumenthal Music Center</li>
+                            <li>Drisco Hotel</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Section -->
+    <section id="media" class="bg-neutral-50 px-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-24">
+                <div>
+                    <span class="text-accent text-[10px] font-bold tracking-[0.4em] uppercase mb-8 block">Audio & Video</span>
+                    <h2 class="serif text-5xl md:text-7xl mb-16">Listen <br><span class="italic text-accent">Live</span></h2>
+                    
+                    <div class="aspect-video bg-black rounded-sm overflow-hidden shadow-2xl mb-12">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/videoseries?list=PLzW0Tq9S0y_4X_1B-V3S-LhBv7G6T9Y6G" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <a href="https://youtube.com/@gorjazz_duo" target="_blank" class="btn-modern text-[10px]">Explore YouTube Channel</a>
+                </div>
                 
-                <div class="space-y-8">
-                    <div class="p-1 rounded-sm border border-neutral-100">
+                <div class="lg:pt-24">
+                    <div class="bg-white p-2 border border-neutral-100 shadow-xl">
                         <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/gorjazz_duo/" data-instgrm-version="14" style="background:#FFF; border:0; margin: 1px; width:100%;"></blockquote>
                     </div>
-                    <div class="text-left px-4">
-                        <span class="text-[10px] uppercase tracking-widest text-accent font-bold">Follow Us</span>
-                        <a href="https://www.instagram.com/gorjazz_duo/" target="_blank" class="block serif italic text-3xl mt-2 hover:text-accent transition">@gorjazz_duo</a>
-                    </div>
+                    <p class="mt-12 text-center">
+                        <a href="https://www.instagram.com/gorjazz_duo/" target="_blank" class="serif italic text-3xl text-accent hover:text-black transition underline decoration-neutral-200 underline-offset-8">@gorjazz_duo</a>
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-40 bg-neutral-900 text-[#fdfcfb] px-8 text-center relative overflow-hidden">
-        <div class="max-w-4xl mx-auto relative z-10">
-            <span class="text-accent text-[10px] font-bold tracking-[0.3em] uppercase mb-8 block">Connect</span>
-            <h2 class="serif text-6xl md:text-[8rem] font-bold mb-16">Get in Touch</h2>
-            <p class="text-xl text-white/50 font-light max-w-xl mx-auto mb-20">
-                Let's discuss how we can create the perfect soulful atmosphere for your next event.
+    <section id="contact" class="bg-white text-center px-10">
+        <div class="max-w-4xl mx-auto">
+            <span class="text-accent text-[10px] font-bold tracking-[0.4em] uppercase mb-12 block">Reserve a Date</span>
+            <h2 class="serif text-7xl md:text-[10rem] font-bold leading-none mb-16">Connect</h2>
+            <p class="text-2xl text-neutral-300 font-light mb-24 max-w-xl mx-auto leading-relaxed">
+                We are currently booking for the 2026-2027 season. We would love to hear about your celebration.
             </p>
             
-            <div class="flex flex-col md:flex-row gap-16 justify-center items-center">
+            <div class="flex flex-col md:flex-row gap-20 justify-center items-center">
                 <a href="https://wa.me/972545774407" class="group">
-                    <div class="text-[10px] font-bold tracking-[0.4em] uppercase text-accent mb-4">WhatsApp</div>
-                    <div class="serif text-4xl md:text-5xl group-hover:italic transition-all duration-500">054-5774407</div>
+                    <div class="text-[10px] font-bold tracking-[0.5em] uppercase text-accent mb-6">WhatsApp</div>
+                    <div class="serif text-5xl group-hover:italic transition-all duration-700">054.577.4407</div>
                 </a>
                 <a href="mailto:inbal.ph@gmail.com" class="group">
-                    <div class="text-[10px] font-bold tracking-[0.4em] uppercase text-accent mb-4">Email</div>
-                    <div class="serif text-4xl md:text-5xl group-hover:italic transition-all duration-500 underline decoration-white/10 underline-offset-8">Inquiry</div>
+                    <div class="text-[10px] font-bold tracking-[0.5em] uppercase text-accent mb-6">Email</div>
+                    <div class="serif text-5xl group-hover:italic transition-all duration-700">Inquire</div>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-16 bg-neutral-900 text-[#fdfcfb]/30 text-center px-8 border-t border-white/5">
-        <div class="serif text-2xl tracking-widest mb-10 text-white/90">GORJAZZ</div>
-        <div class="flex justify-center flex-wrap gap-10 text-[9px] font-bold tracking-[0.3em] uppercase mb-12">
-            <a href="#about" class="hover:text-white transition">About</a>
-            <a href="#weddings" class="hover:text-white transition">Weddings</a>
-            <a href="#media" class="hover:text-white transition">Listen</a>
-            <a href="https://instagram.com/gorjazz_duo" target="_blank" class="hover:text-white transition">Instagram</a>
+    <footer class="py-20 border-t border-neutral-100 text-center px-10">
+        <div class="serif text-3xl tracking-[0.2em] mb-12 opacity-80 uppercase">GorJazz</div>
+        <div class="flex justify-center flex-wrap gap-12 text-[9px] font-bold tracking-[0.4em] uppercase text-neutral-400 mb-16">
+            <a href="#about" class="hover:text-black transition">Duo</a>
+            <a href="#events" class="hover:text-black transition">Events</a>
+            <a href="#media" class="hover:text-black transition">Media</a>
+            <a href="https://instagram.com/gorjazz_duo" target="_blank" class="hover:text-black transition">Instagram</a>
         </div>
-        <p class="text-[8px] tracking-[0.2em] uppercase">Inbal Hanasab & Nadav Ziv — © 2026</p>
+        <p class="text-[9px] text-neutral-300 tracking-[0.3em] uppercase italic">Inbal Hanasab & Nadav Ziv — © 2026</p>
     </footer>
 
     <script async src="//www.instagram.com/embed.js"></script>
