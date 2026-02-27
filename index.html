@@ -28,9 +28,19 @@
             background-color: #f4f1ea;
             border-bottom: 1px solid #e5e1d8;
         }
-        .insta-container {
-            max-width: 540px;
-            margin: 0 auto;
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
@@ -41,8 +51,9 @@
             <a href="index.html" class="text-2xl font-bold serif tracking-wider uppercase opacity-90">GorJazz</a>
             <div class="hidden md:flex space-x-reverse space-x-10 font-medium text-sm tracking-widest uppercase">
                 <a href="#about" class="hover:opacity-60 transition">אודות</a>
+                <a href="#youtube" class="hover:opacity-60 transition">וידאו</a>
                 <a href="#instagram" class="hover:opacity-60 transition">אינסטגרם</a>
-                <a href="#music" class="hover:opacity-60 transition">מוזיקה</a>
+                <a href="#performances" class="hover:opacity-60 transition">הופעות עבר</a>
                 <a href="#contact" class="hover:opacity-60 transition">צרו קשר</a>
             </div>
         </div>
@@ -57,7 +68,7 @@
                 מסע מוזיקלי אקוסטי בעקבות הזמרות הגדולות שעיצבו את ההיסטוריה. עיבודים אינטימיים לשירים שתמיד נשארים בלב.
             </p>
             <div class="flex flex-col md:flex-row gap-6 justify-center">
-                <a href="#instagram" class="bg-[#2d2d2d] text-[#fcfaf7] px-10 py-4 rounded-full text-lg font-medium hover:opacity-90 transition">הצצה להופעות</a>
+                <a href="#youtube" class="bg-[#2d2d2d] text-[#fcfaf7] px-10 py-4 rounded-full text-lg font-medium hover:opacity-90 transition">צפו בהופעות</a>
                 <a href="https://wa.me/972545774407" class="border border-[#2d2d2d]/20 px-10 py-4 rounded-full text-lg font-medium hover:bg-[#2d2d2d]/5 transition">תיאום מופע</a>
             </div>
         </div>
@@ -91,18 +102,37 @@
         </div>
     </section>
 
+    <!-- YouTube/Media Section -->
+    <section id="youtube" class="py-32 bg-white">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-4xl serif mb-4 accent-brass">צפו במופע</h2>
+            <p class="text-lg opacity-60 mb-16">רגעים מתוך הופעות חיות וקטעי אולפן</p>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="video-container rounded-2xl shadow-xl overflow-hidden border border-[#e5e1d8]">
+                    <iframe src="https://www.youtube.com/embed/videoseries?list=PLzW0Tq9S0y_4X_1B-V3S-LhBv7G6T9Y6G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="flex flex-col justify-center text-right">
+                    <h3 class="text-2xl serif mb-6 accent-brass">הצליל של GorJazz</h3>
+                    <p class="text-lg opacity-80 mb-8 leading-relaxed">
+                        העיבודים שלנו נבנים מתוך הקשבה עמוקה לטקסט ולמלודיה המקורית, תוך יצירת מרחב חדש ואישי שבו הקול והגיטרה מנהלים דיאלוג מתמיד.
+                    </p>
+                    <a href="https://www.youtube.com/@elizaeth565" target="_blank" class="serif italic text-xl underline decoration-brass underline-offset-8">לערוץ היוטיוב המלא</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Instagram Feed Section -->
     <section id="instagram" class="py-32 bg-[#f4f1ea]/50 border-y border-[#e5e1d8]">
         <div class="max-w-6xl mx-auto px-6 text-center">
             <h2 class="text-4xl serif mb-4 accent-brass">מהאינסטגרם שלנו</h2>
             <p class="text-lg opacity-60 mb-16">רגעים מהופעות, חזרות והשראות</p>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-12 items-start justify-center">
-                <!-- Post 1 -->
+            <div class="grid md:grid-cols-2 gap-12 items-start justify-center">
                 <div class="bg-white p-4 rounded-xl shadow-sm border border-[#e5e1d8]">
                     <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/gorjazz_duo/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
                 </div>
-                <!-- Post 2 -->
                 <div class="bg-white p-4 rounded-xl shadow-sm border border-[#e5e1d8]">
                     <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DEv_xLgtL-E/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
                 </div>
@@ -116,24 +146,37 @@
         </div>
     </section>
 
-    <!-- Music/Audio Section -->
-    <section id="music" class="py-32">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl serif mb-16 accent-brass text-center">האזינו לצלילים</h2>
-            <div class="space-y-12">
-                <div class="flex flex-col md:flex-row items-center gap-10 bg-white p-8 rounded-2xl border border-[#e5e1d8]">
-                    <div class="w-20 h-20 bg-[#f4f1ea] rounded-full flex items-center justify-center text-2xl accent-brass serif">01</div>
-                    <div class="flex-1 text-right">
-                        <h3 class="text-2xl font-bold serif mb-1">Summertime</h3>
-                        <p class="opacity-50">Live Tribute Performance</p>
-                    </div>
-                    <div class="w-full md:w-auto">
-                        <div class="h-1 bg-[#f4f1ea] rounded-full overflow-hidden">
-                            <div class="w-1/3 h-full bg-accent-brass"></div>
-                        </div>
-                    </div>
+    <!-- Past Performances Section -->
+    <section id="performances" class="py-32">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-4xl serif mb-4 accent-brass text-center">היכן הופענו</h2>
+            <p class="text-lg opacity-60 mb-16 text-center">במות וחללים שארחנו בהם מוזיקה</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 border border-[#e5e1d8] rounded-xl text-center hover:bg-white transition">
+                    <h4 class="font-bold serif text-xl mb-2">מרכז פליציה בלומנטל</h4>
+                    <p class="text-sm opacity-60">תל אביב</p>
                 </div>
-                <!-- More items can be added here -->
+                <div class="p-8 border border-[#e5e1d8] rounded-xl text-center hover:bg-white transition">
+                    <h4 class="font-bold serif text-xl mb-2">מוזיאון תל אביב לאמנות</h4>
+                    <p class="text-sm opacity-60">אירועי תרבות</p>
+                </div>
+                <div class="p-8 border border-[#e5e1d8] rounded-xl text-center hover:bg-white transition">
+                    <h4 class="font-bold serif text-xl mb-2">בית אריאלה</h4>
+                    <p class="text-sm opacity-60">סדרות ג'אז</p>
+                </div>
+                <div class="p-8 border border-[#e5e1d8] rounded-xl text-center hover:bg-white transition">
+                    <h4 class="font-bold serif text-xl mb-2">אירועי בוטיק ופרטיים</h4>
+                    <p class="text-sm opacity-60">ברחבי הארץ</p>
+                </div>
+                <div class="p-8 border border-[#e5e1d8] rounded-xl text-center hover:bg-white transition">
+                    <h4 class="font-bold serif text-xl mb-2">מלונות יוקרה</h4>
+                    <p class="text-sm opacity-60">אווירת קוקטייל</p>
+                </div>
+                <div class="p-8 border border-[#e5e1d8] rounded-xl text-center hover:bg-white transition">
+                    <h4 class="font-bold serif text-xl mb-2">פסטיבלי ג'אז</h4>
+                    <p class="text-sm opacity-60">במות פתוחות</p>
+                </div>
             </div>
         </div>
     </section>
@@ -159,8 +202,19 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 text-center text-xs opacity-40 uppercase tracking-[0.2em]">
-        <p>© 2026 GorJazz. Inbal Hanasab & Nadav Ziv</p>
+    <footer class="py-12 bg-[#fcfaf7] border-t border-[#e5e1d8] text-center">
+        <div class="max-w-6xl mx-auto px-6">
+            <p class="serif jazz-gold text-xl mb-6 uppercase tracking-widest opacity-90">GorJazz</p>
+            <div class="flex justify-center space-x-reverse space-x-8 mb-8 text-xs uppercase tracking-widest opacity-60 font-medium">
+                <a href="#about" class="hover:opacity-100 transition">אודות</a>
+                <a href="#youtube" class="hover:opacity-100 transition">וידאו</a>
+                <a href="#instagram" class="hover:opacity-100 transition">אינסטגרם</a>
+                <a href="#performances" class="hover:opacity-100 transition">הופעות עבר</a>
+                <a href="#contact" class="hover:opacity-100 transition">צרו קשר</a>
+            </div>
+            <p class="text-[10px] opacity-40 tracking-[0.2em] mb-2 uppercase">Inbal Hanasab & Nadav Ziv</p>
+            <p class="text-[10px] opacity-40 tracking-[0.2em] uppercase">© 2026 GorJazz. All rights reserved.</p>
+        </div>
     </footer>
 
     <!-- Instagram Script -->
