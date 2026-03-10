@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sarielgil.github.io/gorjazz/sitemap.xml

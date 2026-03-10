@@ -1,220 +1,510 @@
+Here's the HTML for your GORJAZZ website, designed with a 'Modern Editorial' style, high contrast, sophisticated typography, and a premium aesthetic. All CSS is contained within the `<style>` block in the `<head>` as per your request, providing a self-contained, elegant single-page solution.
+<meta property='og:url' content='https://sarielgil.github.io/gorjazz/'>
+<meta property='og:title' content='GORJAZZ - Jazz & Blues Duo'>
+<link rel='canonical' href='https://sarielgil.github.io/gorjazz/'>
+
+```html
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
+<meta property='og:url' content='https://sarielgil.github.io/gorjazz/'>
+<meta property='og:title' content='GORJAZZ - Jazz & Blues Duo'>
+<link rel='canonical' href='https://sarielgil.github.io/gorjazz/'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GORJAZZ - מסע מוזיקלי מניו יורק ועד תל אביב</title>
-    <meta name="description" content="GORJAZZ - דואט ג'אז ובלוז אינטימי לקבלות פנים, חתונות ואירועי בוטיק. חוויה תרבותית סוחפת בין ניו יורק לתל אביב.">
+    <title>GORJAZZ | ג'אז ובלוז מתל אביב</title>
+    <meta name="description" content="GORJAZZ - צמד ג'אז ובלוז ייחודי מתל אביב, לאירועים, חתונות והופעות. מסע מוזיקלי רומנטי ועשיר.">
+
+    <!-- Google Fonts: Heebo for body, Rubik for headings -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
     <style>
+        /* Base Reset & Variables */
         :root {
-            --primary: #1a1a1a;
-            --accent: #d4af37;
-            --bg: #ffffff;
-            --text: #333333;
-            --light-gray: #f9f9f9;
+            --color-primary-dark: #1A1A1A; /* Deep Black */
+            --color-primary-light: #F8F8F8; /* Soft White */
+            --color-accent-gold: #B8860B; /* Dark Goldenrod / Bronze */
+            --font-body: 'Heebo', sans-serif;
+            --font-heading: 'Rubik', sans-serif;
+            --max-width: 1200px;
+            --spacing-unit: 1.5rem; /* 24px */
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Assistant', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-        
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-        /* Header & Nav */
-        header { padding: 30px 0; border-bottom: 1px solid #eee; position: sticky; top: 0; background: #fff; z-index: 1000; }
-        nav { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); }
-        .nav-links { list-style: none; display: flex; gap: 30px; }
-        .nav-links a { text-decoration: none; color: var(--text); font-weight: 400; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--accent); }
+        html {
+            scroll-behavior: smooth;
+        }
 
-        /* Hero Section - FIXED SPACING AND CONTRAST */
-        .hero { 
-            position: relative; 
-            height: 90vh; 
-            display: flex; 
-            align-items: center; 
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--color-primary-dark);
+            background-color: var(--color-primary-light);
+            direction: rtl; /* Right-to-left text direction */
+            text-align: right;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--color-primary-dark);
+            line-height: 1.2;
+            margin-bottom: var(--spacing-unit);
+        }
+
+        h1 { font-size: 3rem; }
+        h2 { font-size: 2.5rem; }
+        h3 { font-size: 2rem; }
+        p { margin-bottom: 1rem; }
+
+        @media (min-width: 768px) {
+            h1 { font-size: 4.5rem; }
+            h2 { font-size: 3.5rem; }
+            h3 { font-size: 2.5rem; }
+        }
+
+        /* Links & Buttons */
+        a {
+            color: var(--color-accent-gold);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--color-primary-dark);
+        }
+
+        .button {
+            display: inline-block;
+            background-color: var(--color-accent-gold);
+            color: var(--color-primary-light);
+            padding: 0.8rem 1.8rem;
+            border: none;
+            border-radius: 3px;
+            font-family: var(--font-heading);
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: var(--color-primary-dark);
+            color: var(--color-accent-gold);
+        }
+
+        /* Layout & Spacing */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: var(--spacing-unit);
+        }
+
+        section {
+            padding: calc(var(--spacing-unit) * 3) 0; /* More padding for sections */
+        }
+
+        /* Header & Navigation */
+        .site-header {
+            background-color: var(--color-primary-dark);
+            padding: 1rem var(--spacing-unit);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--color-accent-gold);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center; /* Center nav items */
+            align-items: center;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping on small screens */
             justify-content: center;
-            overflow: hidden;
-            background: #000;
+            gap: 1.5rem;
         }
-        .hero-img {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            object-fit: cover;
-            object-position: center 20%;
-            opacity: 0.7; /* Increased darkening */
+
+        .main-nav a {
+            color: var(--color-primary-light);
+            font-family: var(--font-heading);
+            font-weight: 400;
+            font-size: 1.05rem;
+            padding: 0.2rem 0;
+            position: relative;
         }
-        .hero-overlay {
+
+        .main-nav a::after {
+            content: '';
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+            right: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-accent-gold);
+            transition: width 0.3s ease;
+        }
+
+        .main-nav a:hover::after,
+        .main-nav a.active::after { /* Add an active state if desired */
+            width: 100%;
+            left: 0;
+            right: auto;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-image: url('images/hero-bg.jpg'); /* Placeholder for a bold image */
+            background-size: cover;
+            background-position: center;
+            color: var(--color-primary-light);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh; /* Full viewport height on desktop */
+            position: relative;
+            padding: var(--spacing-unit);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.65); /* Dark overlay for text readability */
+        }
+
+        .hero-content {
+            position: relative;
             z-index: 1;
-        }
-        .hero-content { 
-            position: relative; 
-            z-index: 2; 
-            text-align: center; 
-            color: #fff;
-            padding: 40px;
             max-width: 800px;
         }
-        .hero h1 { 
-            font-family: 'Playfair Display', serif; 
-            font-size: 5rem; 
-            margin-bottom: 20px; 
-            letter-spacing: 4px;
-        }
-        .hero p { 
-            font-size: 1.5rem; 
-            margin-bottom: 30px; 
-            font-weight: 300;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .btn {
-            display: inline-block;
-            padding: 15px 40px;
-            border: 2px solid var(--accent);
-            color: var(--accent);
-            text-decoration: none;
-            text-transform: uppercase;
+
+        .hero h1 {
+            font-size: 4.5rem;
+            color: var(--color-primary-light);
+            margin-bottom: 0.5rem;
             font-weight: 700;
-            letter-spacing: 1px;
-            transition: all 0.3s;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
-        .btn:hover { background: var(--accent); color: #fff; }
 
-        /* Sections */
-        section { padding: 100px 0; }
-        .section-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; text-align: center; margin-bottom: 60px; position: relative; }
-        .section-title::after { content: ''; display: block; width: 50px; height: 2px; background: var(--accent); margin: 20px auto 0; }
+        .hero p {
+            font-family: var(--font-body);
+            font-size: 1.5rem;
+            color: var(--color-primary-light);
+            font-weight: 300;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
 
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .about-text { font-size: 1.2rem; }
-        .about-img { width: 100%; border-radius: 4px; box-shadow: 20px 20px 0 var(--light-gray); }
-
-        .services { background: var(--light-gray); }
-        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-        .service-card { background: #fff; padding: 40px; text-align: center; border-radius: 4px; }
-        .service-card h3 { font-family: 'Playfair Display', serif; margin-bottom: 20px; color: var(--accent); }
-
-        /* Gallery */
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .gallery-item { height: 400px; overflow: hidden; position: relative; }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-        .gallery-item:hover img { transform: scale(1.05); }
-
-        /* Contact */
-        .contact-content { text-align: center; max-width: 600px; margin: 0 auto; }
-        .contact-info { margin-bottom: 40px; font-size: 1.3rem; }
-        .social-links { display: flex; justify-content: center; gap: 20px; list-style: none; margin-top: 20px; }
-        .social-links a { color: var(--primary); text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s; }
-        .social-links a:hover { border-bottom-color: var(--accent); color: var(--accent); }
-
-        footer { background: var(--primary); color: #fff; padding: 60px 0; text-align: center; }
-        .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 20px; }
-        
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
+            .hero {
+                min-height: 60vh;
+                padding: var(--spacing-unit) 0.8rem;
+            }
             .hero h1 { font-size: 3rem; }
-            .about-grid, .services-grid { grid-template-columns: 1fr; }
-            .hero { height: 70vh; }
+            .hero p { font-size: 1.2rem; }
+        }
+
+        /* General Section Styling */
+        .section-heading {
+            text-align: center;
+            margin-bottom: calc(var(--spacing-unit) * 2);
+            font-size: 2.8rem;
+            color: var(--color-accent-gold);
+        }
+
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+
+        /* About Section */
+        #about p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Shows & Performances Section */
+        #shows {
+            background-color: var(--color-primary-dark);
+            color: var(--color-primary-light);
+        }
+
+        #shows .section-heading {
+            color: var(--color-accent-gold);
+        }
+
+        #shows .section-content {
+            text-align: center;
+            color: var(--color-primary-light);
+        }
+
+        /* Weddings & Private Events Section */
+        #events {
+            background-color: var(--color-primary-light);
+            color: var(--color-primary-dark);
+        }
+
+        #events .section-heading {
+             color: var(--color-primary-dark);
+        }
+
+        #events .section-content {
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+        
+        /* Gallery Section */
+        #gallery .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-unit);
+            max-width: calc(var(--max-width) - var(--spacing-unit) * 2);
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--color-accent-gold);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px; /* Fixed height for consistency */
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: var(--color-primary-dark);
+            color: var(--color-primary-light);
+        }
+
+        #contact .section-heading {
+            color: var(--color-accent-gold);
+        }
+
+        .contact-form-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: var(--spacing-unit) calc(var(--spacing-unit) * 1.5);
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 5px;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: var(--spacing-unit);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            color: var(--color-primary-light);
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--color-accent-gold);
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--color-primary-light);
+            border-radius: 3px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
+        .contact-form textarea:focus {
+            border-color: var(--color-primary-light);
+            background-color: rgba(255, 255, 255, 0.15);
+            outline: none;
+        }
+
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .contact-social {
+            text-align: center;
+            margin-top: calc(var(--spacing-unit) * 2);
+            font-size: 1.1rem;
+        }
+
+        .contact-social a {
+            color: var(--color-accent-gold);
+            margin: 0 1rem;
+            font-family: var(--font-heading);
+            font-weight: 500;
+            font-size: 1.2rem;
+        }
+
+        .contact-social a:hover {
+            color: var(--color-primary-light);
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: var(--color-primary-dark);
+            color: var(--color-primary-light);
+            text-align: center;
+            padding: var(--spacing-unit);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--color-accent-gold);
+        }
+
+        .site-footer p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Utility classes (optional, for specific text styling) */
+        .text-gold {
+            color: var(--color-accent-gold);
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">GORJAZZ</div>
-                <ul class="nav-links">
-                    <li><a href="#about">עלינו</a></li>
-                    <li><a href="#services">אירועים</a></li>
-                    <li><a href="#contact">יצירת קשר</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="site-header">
+        <nav class="nav-container main-nav">
+            <ul>
+                <li><a href="#hero">בית</a></li>
+                <li><a href="#about">אודות</a></li>
+                <li><a href="#shows">הופעות</a></li>
+                <li><a href="#events">אירועים פרטיים</a></li>
+                <li><a href="#gallery">גלריה</a></li>
+                <li><a href="#contact">יצירת קשר</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section class="hero" id="home">
-            <img src="images/photo_tAAKCDWsbGzKAUboMUTAOxjzBAQADAgADdwADOgQ.jpg" alt="GORJAZZ duo performing" class="hero-img">
-            <div class="hero-overlay"></div>
+        <!-- 1. Hero Section -->
+        <section id="hero" class="hero">
             <div class="hero-content">
                 <h1>GORJAZZ</h1>
-                <p>מסע מוזיקלי רומנטי בין ניו יורק לתל אביב. ג'אז ובלוז אינטימי עם יין משובח.</p>
-                <a href="#contact" class="btn">הזמינו הופעה</a>
+                <p>מסע מוזיקלי רומנטי של ג'אז ובלוז</p>
             </div>
         </section>
 
+        <!-- 2. About Section -->
         <section id="about" class="container">
-            <h2 class="section-title">הוויב הניו יורקי בלב תל אביב</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>GORJAZZ הוא דואט ג'אז ובלוז ישראלי המציע מסע מוזיקלי רומנטי המגשר בין ניו יורק לניו אורלינס ועד תל אביב. </p>
-                    <br>
-                    <p>ההרכב משלב ג'אז ובלוז באווירה אינטימית ונעימה, ומביא את החוויה התרבותית הסוחפת של מועדוני הג'אז הגדולים בעולם אל הלב של ישראל.</p>
-                </div>
-                <img src="images/photo_cAAKDDWsbGzKAUTpLoq0lIokfAQADAgADdwADOgQ.jpg" alt="GORJAZZ Live Performance" class="about-img">
+            <h2 class="section-heading">על אודות GORJAZZ</h2>
+            <div class="section-content">
+                <p>GORJAZZ הוא צמד ג'אז ובלוז ייחודי מתל אביב, המשלב בין הליריות העמוקה של ניו יורק, הקצב הסוחף של ניו אורלינס, והנשמה החמה של המזרח התיכון.</p>
+                <p>אנו מביאים לבמה פרשנות אישית ומרגשת לסטנדרטים אהובים וקלאסיקות נשכחות, עם דגש על אינטימיות וחיבור אמיתי לקהל. בין אם אתם מחפשים אווירה רגועה ואלגנטית, או ערב קצבי ומלא נשמה, GORJAZZ מעניקים חוויה מוזיקלית עשירה ובלתי נשכחת.</p>
+                <p>בואו לחוות איתנו מסע צלילים החוצה יבשות וסגנונות, ומחבר בין מזרח למערב בדרך מקורית ומרגשת.</p>
             </div>
         </section>
 
-        <section id="services" class="services">
+        <!-- 3. Shows & Performances Section -->
+        <section id="shows">
             <div class="container">
-                <h2 class="section-title">הופעות ואירועים</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h3>קבלות פנים לחתונות</h3>
-                        <p>האווירה המושלמת לרגע שבו הכל מתחיל. מוזיקה אלגנטית ומזמינה שמרגשת את האורחים מהרגע הראשון.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>אירועי בוטיק ויין</h3>
-                        <p>השילוב המנצח של ג'אז איכותי ויין משובח. מתאים לערבי חברה, אירועים פרטיים ומקומות שמעריכים סטייל.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>הופעות חיות</h3>
-                        <p>מופע סוחף שמרגיש כמו קפיצה קטנה לניו אורלינס. מוזיקה חיה שנוגעת בנשמה ויוצרת רגעים בלתי נשכחים.</p>
-                    </div>
+                <h2 class="section-heading">הופעות קרובות</h2>
+                <div class="section-content">
+                    <p>כרגע אין הופעות פתוחות לקהל הרחב. אנו עובדים על לו"ז הופעות חדש ומבטיח.</p>
+                    <p>אנא עקבו אחרינו במדיה החברתית לעדכונים שוטפים ותאריכי הופעות חדשים. אנו מצפים לראותכם!</p>
                 </div>
             </div>
         </section>
 
+        <!-- 4. Weddings & Private Events Section -->
+        <section id="events" class="container">
+            <h2 class="section-heading">אירועים פרטיים וחתונות</h2>
+            <div class="section-content">
+                <p>GORJAZZ מוסיפים נופך של אלגנטיות, רומנטיקה וסטייל לכל אירוע. בין אם זו חתונה אינטימית, קבלת פנים יוקרתית, אירוע חברה מיוחד או מסיבה פרטית, אנו ניצור עבורכם את האווירה המוזיקלית המושלמת שתשאיר רושם עמוק.</p>
+                <p>עם רפרטואר עשיר ומגוון של ג'אז, בלוז ועיבודים מיוחדים, אנו מתאימים את עצמנו לטעמכם האישי ולסוג האירוע, ומבטיחים שיום חגכם או האירוע שלכם יהיה בלתי נשכח וילווה בפסקול מעורר השראה.</p>
+                <p>צרו קשר עוד היום לקבלת הצעת מחיר מותאמת אישית ולתכנון המוזיקלי המושלם לאירוע שלכם.</p>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="#contact" class="button">צרו קשר עכשיו</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Gallery Section -->
         <section id="gallery" class="container">
-            <h2 class="section-title">גלריה</h2>
+            <h2 class="section-heading">גלריה</h2>
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="images/photo_GAAKEDWsbGzKAUYrI1BjK4FYqAQADAgADdwADOgQ.jpg" alt="Singer and Guitarist">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/photo_tAAKCDWsbGzKAUboMUTAOxjzBAQADAgADdwADOgQ.jpg" alt="Performance Close Up">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/photo_cAAKDDWsbGzKAUTpLoq0lIokfAQADAgADdwADOgQ.jpg" alt="Jazz Duo">
-                </div>
+                <div class="gallery-item"><img src="images/photo1.jpg" alt="GORJAZZ Performance 1"></div>
+                <div class="gallery-item"><img src="images/photo2.jpg" alt="GORJAZZ Performance 2"></div>
+                <div class="gallery-item"><img src="images/photo3.jpg" alt="GORJAZZ Performance 3"></div>
+                <!-- Add more images as needed -->
             </div>
         </section>
 
-        <section id="contact" class="container">
-            <h2 class="section-title">דברו איתנו</h2>
-            <div class="contact-content">
-                <p class="contact-info">אנחנו כאן כדי להוסיף את הטאץ' המוזיקלי המושלם לאירוע שלכם.</p>
-                <p>עקבו אחרינו באינסטגרם לעדכונים על הופעות קרובות:</p>
-                <ul class="social-links">
-                    <li><a href="https://www.instagram.com/gorjazz_duo/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                </ul>
+        <!-- 6. Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-heading">צרו קשר</h2>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">שם מלא:</label>
+                            <input type="text" id="name" name="name" placeholder="הזינו את שמכם המלא" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">כתובת אימייל:</label>
+                            <input type="email" id="email" name="email" placeholder="הזינו את כתובת האימייל שלכם" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">הודעה:</label>
+                            <textarea id="message" name="message" placeholder="כתבו לנו את הודעתכם..." required></textarea>
+                        </div>
+                        <div style="text-align: center;">
+                            <button type="submit" class="button">שלח</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-social">
+                    <p>עקבו אחרינו במדיה החברתית:</p>
+                    <a href="https://facebook.com/gorjazz" target="_blank" rel="noopener noreferrer">פייסבוק</a>
+                    <a href="https://instagram.com/gorjazz" target="_blank" rel="noopener noreferrer">אינסטגרם</a>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-logo">GORJAZZ</div>
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> GORJAZZ. כל הזכויות שמורות.</p>
-        </div>
+    <footer class="site-footer">
+        <p>&copy; 2023 GORJAZZ. כל הזכויות שמורות.</p>
     </footer>
 
 </body>
