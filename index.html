@@ -3,157 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GorJazz | דואט ג'אז לאירועים</title>
+    <title>GORJAZZ - דואט ג'אז ובלוז אינטימי בתל אביב</title>
+    <meta name="description" content="GORJAZZ מביאים את הוויב הניו יורקי ללב תל אביב. מסע מוזיקלי רומנטי המשלב ג'אז ובלוז באווירה אינטימית ויין משובח. הופעות חיות וקבלות פנים לחתונות.">
+    <link rel="canonical" href="https://sarielgil.github.io/gorjazz/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Secular+One&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #2d5a27; /* Forest Green */
-            --secondary: #e8f5e9; /* Light Mint */
-            --accent: #d4a373; /* Earthy Gold */
-            --text: #333;
-            --bg: #fffdfa; /* Warm White */
+            --primary: #d4af37; /* Gold */
+            --secondary: #1a1a1a; /* Dark gray */
+            --accent: #8b0000; /* Deep red */
+            --bg: #0a0a0a;
+            --text: #f5f5f5;
+            --text-dim: #b0b0b0;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Assistant', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
-        h1, h2, h3 { font-family: 'Secular One', sans-serif; color: var(--primary); }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        
-        header { padding: 20px 0; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-        nav { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); text-decoration: none; }
-        .nav-links { list-style: none; display: flex; gap: 20px; }
-        .nav-links a { text-decoration: none; color: var(--text); font-weight: 600; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--accent); }
 
-        .hero { 
-            height: 80vh; 
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1600&q=80'); 
-            background-size: cover; 
-            background-position: center; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            text-align: center; 
-            color: white; 
+        * { margin: 0; padding: 0; box-box: border-box; }
+        body { 
+            font-family: 'Assistant', sans-serif; 
+            background-color: var(--bg); 
+            color: var(--text); 
+            line-height: 1.6;
+            scroll-behavior: smooth;
         }
-        .hero-content h1 { color: white; font-size: 3.5rem; margin-bottom: 10px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
-        .hero-content p { font-size: 1.2rem; margin-bottom: 25px; }
-        .btn { display: inline-block; padding: 12px 30px; background: var(--primary); color: white; text-decoration: none; border-radius: 50px; font-weight: bold; transition: transform 0.3s, background 0.3s; }
-        .btn:hover { background: var(--accent); transform: translateY(-3px); }
+        h1, h2, h3 { font-family: 'Secular One', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
 
-        section { padding: 80px 0; }
-        .section-title { text-align: center; margin-bottom: 50px; font-size: 2.5rem; }
-        
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-        .about-img { width: 100%; border-radius: 20px; box-shadow: 20px 20px 0 var(--secondary); }
+        header {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
 
-        .services { background: var(--secondary); }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .service-card { background: white; padding: 40px; border-radius: 15px; text-align: center; transition: transform 0.3s; }
-        .service-card:hover { transform: translateY(-10px); }
-        .service-card h3 { margin-bottom: 15px; }
+        .hero-title { font-size: 5rem; color: var(--primary); margin-bottom: 10px; }
+        .hero-subtitle { font-size: 1.5rem; max-width: 600px; margin-bottom: 30px; }
+        .btn {
+            padding: 15px 40px;
+            background: var(--primary);
+            color: var(--bg);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn:hover { background: #fff; transform: translateY(-3px); }
 
-        .contact-form { max-width: 600px; margin: 0 auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .form-group { margin-bottom: 20px; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; }
-        input, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; }
-        
-        footer { background: var(--primary); color: white; text-align: center; padding: 40px 0; }
-        .social-links { margin: 20px 0; display: flex; justify-content: center; gap: 20px; }
-        .social-links a { color: white; text-decoration: none; font-size: 1.2rem; }
+        section { padding: 100px 20px; max-width: 1200px; margin: 0 auto; text-align: center; }
+        .section-title { font-size: 2.5rem; margin-bottom: 50px; position: relative; display: inline-block; }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; text-align: right; }
+        .about-text p { margin-bottom: 20px; font-size: 1.2rem; color: var(--text-dim); }
+        .about-img img { width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+
+        .services { background: #111; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .service-card { padding: 40px; border: 1px solid #333; border-radius: 10px; transition: 0.3s; }
+        .service-card:hover { border-color: var(--primary); background: #1a1a1a; }
+        .service-card h3 { color: var(--primary); margin-bottom: 15px; }
+
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .gallery img { width: 100%; height: 300px; object-fit: cover; border-radius: 5px; filter: grayscale(50%); transition: 0.5s; }
+        .gallery img:hover { filter: grayscale(0%); transform: scale(1.02); }
+
+        .gigs-list { max-width: 800px; margin: 0 auto; text-align: right; }
+        .gig-item { display: flex; justify-content: space-between; padding: 20px; border-bottom: 1px solid #333; }
+        .gig-date { color: var(--primary); font-weight: bold; }
+
+        footer { padding: 50px 20px; background: #000; text-align: center; border-top: 1px solid #222; }
+        .social-links a { color: var(--text); font-size: 1.5rem; margin: 0 15px; text-decoration: none; }
+        .social-links a:hover { color: var(--primary); }
 
         @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2.5rem; }
+            .hero-title { font-size: 3rem; }
             .about-grid { grid-template-columns: 1fr; }
+            .about-text { order: 2; }
+            .about-img { order: 1; }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">GorJazz</a>
-                <ul class="nav-links">
-                    <li><a href="#about">עלינו</a></li>
-                    <li><a href="#services">הופעות</a></li>
-                    <li><a href="#contact">צרו קשר</a></li>
-                </ul>
-            </nav>
-        </div>
+
+    <header id="home">
+        <h1 class="hero-title">GORJAZZ</h1>
+        <p class="hero-subtitle">מסע מוזיקלי רומנטי בין ניו יורק לתל אביב. ג'אז ובלוז באווירה אינטימית עם יין משובח.</p>
+        <a href="#contact" class="btn">להזמנת הופעה</a>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>GorJazz</h1>
-            <p>מוזיקה חיה לאירועים שמרגשת את הנשמה</p>
-            <a href="#contact" class="btn">הזמינו הופעה</a>
-        </div>
-    </section>
-
-    <section id="about" class="container">
+    <section id="about">
         <div class="about-grid">
-            <div>
-                <h2 class="section-title" style="text-align: right;">קצת עלינו</h2>
-                <p>דואט ג'אז המשלב סקסופון וקונטרבס בעיבודים מקוריים וקלאסיים. אנחנו מביאים איתנו אווירה של טבע, בוהו-שיק ומוזיקה איכותית לכל אירוע – מחתונות אינטימיות ועד אירועי חברה יוקרתיים.</p>
-                <p style="margin-top: 15px;">הסגנון שלנו מתאפיין בצלילים חמים, ירוקים ומרגיעים שמשתלבים בצורה מושלמת בנוף הפתוח.</p>
+            <div class="about-text">
+                <h2 class="section-title">הסיפור שלנו</h2>
+                <p>GORJAZZ הוא דואט ג'אז ובלוז תל אביבי שמביא את הוויב האינטימי של מועדוני הניו יורק ללב העיר. השילוב בין סקסופון, גיטרה ושירה יוצר חוויה תרבותית סוחפת, אלגנטית ובלתי נשכחת.</p>
+                <p>אנחנו מציעים רפרטואר עשיר המגשר בין הקלאסיקות של ניו אורלינס לג'אז מודרני, מלווה תמיד באווירה של תחכום ורומנטיקה.</p>
             </div>
-            <img src="https://images.unsplash.com/photo-1525994886773-080587e161c3?auto=format&fit=crop&w=800&q=80" alt="GorJazz performers" class="about-img">
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">מה אנחנו מציעים</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>קבלות פנים</h3>
-                    <p>מוזיקת רקע נעימה ומתוחכמת שיוצרת את האווירה הנכונה כבר מהרגע הראשון.</p>
-                </div>
-                <div class="service-card">
-                    <h3>חתונות בטבע</h3>
-                    <p>התאמה מושלמת לאירועי חוץ, עם סאונד אקוסטי וחם שמשתלב בטבע.</p>
-                </div>
-                <div class="service-card">
-                    <h3>אירועי בוטיק</h3>
-                    <p>הופעה אינטימית ומותאמת אישית לקהל שלכם, עם רפרטואר ג'אז עשיר.</p>
-                </div>
+            <div class="about-img">
+                <img src="images/" alt="GORJAZZ live performance">
             </div>
         </div>
     </section>
 
-    <section id="contact" class="container">
-        <h2 class="section-title">דברו איתנו</h2>
-        <div class="contact-form">
-            <form>
-                <div class="form-group">
-                    <label>שם מלא</label>
-                    <input type="text" placeholder="השם שלכם">
-                </div>
-                <div class="form-group">
-                    <label>אימייל</label>
-                    <input type="email" placeholder="email@example.com">
-                </div>
-                <div class="form-group">
-                    <label>הודעה</label>
-                    <textarea rows="5" placeholder="ספרו לנו על האירוע שלכם..."></textarea>
-                </div>
-                <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">שלח הודעה</button>
-            </form>
+    <section class="services" id="services">
+        <h2 class="section-title">מה אנחנו מציעים</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>הופעות חיות</h3>
+                <p>הופעות אינטימיות בברים, מועדוני ג'אז ואירועי תרבות. מוזיקה שמייצרת אווירה מושלמת ליין משובח ושיחה נעימה.</p>
+            </div>
+            <div class="service-card">
+                <h3>קבלות פנים לחתונות</h3>
+                <p>הופכים את הרגע הראשון של האירוע שלכם לאלגנטי ומרגש. מוזיקת ג'אז ובלוז בלייב שמותאמת בדיוק לאופי החתונה.</p>
+            </div>
+            <div class="service-card">
+                <h3>אירועים פרטיים</h3>
+                <p>מסיבות בוטיק, השקות וערבי חברה שזקוקים למגע של יוקרה וסטייל מוזיקלי ייחודי.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2 class="section-title">רגעים מהבמה</h2>
+        <div class="gallery">
+            <img src="images/" alt="GORJAZZ live at Tel Aviv">
+            <img src="images/" alt="Jazz and Blues duo">
+            <img src="images/" alt="Elegant jazz performance">
+        </div>
+    </section>
+
+    <section id="gigs">
+        <h2 class="section-title">הופעות קרובות</h2>
+        <div class="gigs-list">
+            <div class="gig-item">
+                <span class="gig-info">בית העמודים, תל אביב - ג'אז ובלוז אל תוך הלילה</span>
+                <span class="gig-date">24.03.2026</span>
+            </div>
+            <div class="gig-item">
+                <span class="gig-info">קבלת פנים - מלון נורמן</span>
+                <span class="gig-date">02.04.2026</span>
+            </div>
+            <div class="gig-item">
+                <span class="gig-info">קפה דה סול, יפו - ערב בלוז אינטימי</span>
+                <span class="gig-date">15.04.2026</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">צרו קשר</h2>
+        <p>מעוניינים להזמין אותנו להופעה או לאירוע? אנחנו כאן לכל שאלה.</p>
+        <div style="margin-top: 30px;">
+            <p>אינסטגרם: <a href="https://www.instagram.com/gorjazz_duo/" style="color: var(--primary);">@gorjazz_duo</a></p>
+            <p>טלפון להזמנות: 050-0000000</p>
         </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p>GorJazz - דואט ג'אז לאירועים</p>
-            <div class="social-links">
-                <a href="#">פייסבוק</a>
-                <a href="#">אינסטגרם</a>
-                <a href="#">יוטיוב</a>
-            </div>
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> כל הזכויות שמורות</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/gorjazz_duo/">Instagram</a>
         </div>
+        <p style="margin-top: 20px; color: var(--text-dim);">&copy; <script>document.write(new Date().getFullYear())</script> GORJAZZ. כל הזכויות שמורות.</p>
     </footer>
+
 </body>
 </html>
