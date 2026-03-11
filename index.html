@@ -3,180 +3,475 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GORJAZZ - דואט ג'אז ובלוז אינטימי בתל אביב</title>
-    <meta name="description" content="GORJAZZ מביאים את הוויב הניו יורקי ללב תל אביב. מסע מוזיקלי רומנטי המשלב ג'אז ובלוז באווירה אינטימית ויין משובח. הופעות חיות וקבלות פנים לחתונות.">
+    <title>GORJAZZ | ג'אז ובלוז לאירועים והופעות</title>
+    <meta name="description" content="GORJAZZ - דואט ג'אז ובלוז ישראלי המביא את האווירה של ניו יורק וניו אורלינס ללב תל אביב. מוזיקה חיה לקבלות פנים, חתונות ואירועים.">
+    <meta name="keywords" content="ג'אז, בלוז, מוזיקה לחתונה, קבלת פנים, הופעות ג'אז, תל אביב, GORJAZZ, דואט מוזיקלי">
+    <meta name="author" content="GORJAZZ">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="GORJAZZ | ג'אז ובלוז לאירועים והופעות">
+    <meta property="og:description" content="מסע מוזיקלי רומנטי בין ניו יורק לתל אביב. ג'אז ובלוז באווירה אינטימית ויוקרתית.">
+    <meta property="og:type" content="business.business">
+    <meta property="og:url" content="https://sarielgil.github.io/gorjazz/">
+    <meta property="og:image" content="https://sarielgil.github.io/gorjazz/images/gorjazz-duo.jpg">
+    <meta property="og:locale" content="he_IL">
     <link rel="canonical" href="https://sarielgil.github.io/gorjazz/">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;800&family=Secular+One&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231a1a1a'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='serif'>G</text></svg>">
+    <meta name="theme-color" content="#ffffff">
+
     <style>
         :root {
-            --primary: #d4af37; /* Gold */
-            --secondary: #1a1a1a; /* Dark gray */
-            --accent: #8b0000; /* Deep red */
-            --bg: #0a0a0a;
-            --text: #f5f5f5;
-            --text-dim: #b0b0b0;
+            --primary: #1a1a1a;
+            --secondary: #f5f5f5;
+            --accent: #8b0000;
+            --text: #333333;
+            --bg: #ffffff;
+            --font-main: 'Assistant', sans-serif;
+            --font-head: 'Secular One', sans-serif;
         }
 
-        * { margin: 0; padding: 0; box-box: border-box; }
-        body { 
-            font-family: 'Assistant', sans-serif; 
-            background-color: var(--bg); 
-            color: var(--text); 
-            line-height: 1.6;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
             scroll-behavior: smooth;
         }
-        h1, h2, h3 { font-family: 'Secular One', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text);
+            background-color: var(--bg);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
         header {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/') no-repeat center center/cover;
+            position: fixed;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            z-index: 1000;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        nav {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            text-align: center;
-            padding: 20px;
         }
 
-        .hero-title { font-size: 5rem; color: var(--primary); margin-bottom: 10px; }
-        .hero-subtitle { font-size: 1.5rem; max-width: 600px; margin-bottom: 30px; }
-        .btn {
-            padding: 15px 40px;
-            background: var(--primary);
-            color: var(--bg);
+        .logo {
+            font-family: var(--font-head);
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            color: var(--primary);
             text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: 0.3s;
         }
-        .btn:hover { background: #fff; transform: translateY(-3px); }
 
-        section { padding: 100px 20px; max-width: 1200px; margin: 0 auto; text-align: center; }
-        .section-title { font-size: 2.5rem; margin-bottom: 50px; position: relative; display: inline-block; }
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-right: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/gorjazz-duo.jpg');
+            background-size: cover;
+            background-position: center 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-head);
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 35px;
+            background-color: var(--bg);
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 800;
+            border-radius: 50px;
+            transition: all 0.3s;
+            border: 2px solid var(--bg);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--bg);
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-family: var(--font-head);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
         .section-title::after {
             content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
+            display: block;
+            width: 50px;
             height: 3px;
-            background: var(--primary);
+            background: var(--accent);
+            margin: 15px auto;
         }
 
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; text-align: right; }
-        .about-text p { margin-bottom: 20px; font-size: 1.2rem; color: var(--text-dim); }
-        .about-img img { width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .about {
+            background-color: var(--secondary);
+        }
 
-        .services { background: #111; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .service-card { padding: 40px; border: 1px solid #333; border-radius: 10px; transition: 0.3s; }
-        .service-card:hover { border-color: var(--primary); background: #1a1a1a; }
-        .service-card h3 { color: var(--primary); margin-bottom: 15px; }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
 
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
-        .gallery img { width: 100%; height: 300px; object-fit: cover; border-radius: 5px; filter: grayscale(50%); transition: 0.5s; }
-        .gallery img:hover { filter: grayscale(0%); transform: scale(1.02); }
+        .about-img img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 20px 20px 0 var(--primary);
+        }
 
-        .gigs-list { max-width: 800px; margin: 0 auto; text-align: right; }
-        .gig-item { display: flex; justify-content: space-between; padding: 20px; border-bottom: 1px solid #333; }
-        .gig-date { color: var(--primary); font-weight: bold; }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
 
-        footer { padding: 50px 20px; background: #000; text-align: center; border-top: 1px solid #222; }
-        .social-links a { color: var(--text); font-size: 1.5rem; margin: 0 15px; text-decoration: none; }
-        .social-links a:hover { color: var(--primary); }
+        .service-card {
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card h3 {
+            font-family: var(--font-head);
+            margin-bottom: 15px;
+        }
+
+        .shows-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .show-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .show-date {
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .show-info h4 {
+            font-family: var(--font-head);
+            font-size: 1.2rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 300px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .contact {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            border: none;
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .contact .btn {
+            background-color: var(--accent);
+            color: white;
+            border-color: var(--accent);
+            width: 100%;
+            cursor: pointer;
+        }
+
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+
+        .social-links {
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
 
         @media (max-width: 768px) {
-            .hero-title { font-size: 3rem; }
+            .hero-content h1 { font-size: 2.5rem; }
             .about-grid { grid-template-columns: 1fr; }
-            .about-text { order: 2; }
-            .about-img { order: 1; }
+            .nav-links { display: none; }
+            .section-title { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
-
-    <header id="home">
-        <h1 class="hero-title">GORJAZZ</h1>
-        <p class="hero-subtitle">מסע מוזיקלי רומנטי בין ניו יורק לתל אביב. ג'אז ובלוז באווירה אינטימית עם יין משובח.</p>
-        <a href="#contact" class="btn">להזמנת הופעה</a>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">GORJAZZ</a>
+                <ul class="nav-links">
+                    <li><a href="#about">עלינו</a></li>
+                    <li><a href="#services">אירועים</a></li>
+                    <li><a href="#shows">הופעות</a></li>
+                    <li><a href="#gallery">גלריה</a></li>
+                    <li><a href="#contact">צרו קשר</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="about">
-        <div class="about-grid">
-            <div class="about-text">
-                <h2 class="section-title">הסיפור שלנו</h2>
-                <p>GORJAZZ הוא דואט ג'אז ובלוז תל אביבי שמביא את הוויב האינטימי של מועדוני הניו יורק ללב העיר. השילוב בין סקסופון, גיטרה ושירה יוצר חוויה תרבותית סוחפת, אלגנטית ובלתי נשכחת.</p>
-                <p>אנחנו מציעים רפרטואר עשיר המגשר בין הקלאסיקות של ניו אורלינס לג'אז מודרני, מלווה תמיד באווירה של תחכום ורומנטיקה.</p>
+    <main id="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>GORJAZZ</h1>
+                <p>מסע מוזיקלי רומנטי מגשר בין ניו יורק לתל אביב. ג'אז ובלוז באווירה אינטימית ויין משובח.</p>
+                <a href="#contact" class="btn">הזמינו הופעה</a>
             </div>
-            <div class="about-img">
-                <img src="images/" alt="GORJAZZ live performance">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="services" id="services">
-        <h2 class="section-title">מה אנחנו מציעים</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>הופעות חיות</h3>
-                <p>הופעות אינטימיות בברים, מועדוני ג'אז ואירועי תרבות. מוזיקה שמייצרת אווירה מושלמת ליין משובח ושיחה נעימה.</p>
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h2 class="section-title">הסיפור שלנו</h2>
+                        <p>ההרכב GORJAZZ מביא את הוויב הניו יורקי ללב תל אביב ומספק חוויה תרבותית סוחפת. אנחנו משלבים סטנדרטים של ג'אז קלאסי עם נגיעות של בלוז ונוסטלגיה, ויוצרים פסקול מושלם לערב רומנטי או לאירוע יוקרתי.</p>
+                        <p style="margin-top: 20px;">בין אם זה מועדון אפלולי או קבלת פנים תחת כיפת השמיים, המוזיקה שלנו נועדה לגעת בלב ולחבר בין אנשים דרך צלילים אלגנטיים.</p>
+                    </div>
+                    <div class="about-img">
+                        <img src="images/gorjazz-performance.jpg" alt="הופעה חיה של GORJAZZ" loading="lazy">
+                    </div>
+                </div>
             </div>
-            <div class="service-card">
-                <h3>קבלות פנים לחתונות</h3>
-                <p>הופכים את הרגע הראשון של האירוע שלכם לאלגנטי ומרגש. מוזיקת ג'אז ובלוז בלייב שמותאמת בדיוק לאופי החתונה.</p>
-            </div>
-            <div class="service-card">
-                <h3>אירועים פרטיים</h3>
-                <p>מסיבות בוטיק, השקות וערבי חברה שזקוקים למגע של יוקרה וסטייל מוזיקלי ייחודי.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="gallery">
-        <h2 class="section-title">רגעים מהבמה</h2>
-        <div class="gallery">
-            <img src="images/" alt="GORJAZZ live at Tel Aviv">
-            <img src="images/" alt="Jazz and Blues duo">
-            <img src="images/" alt="Elegant jazz performance">
-        </div>
-    </section>
+        <section id="services">
+            <div class="container">
+                <h2 class="section-title">מה אנחנו מציעים</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>קבלות פנים לחתונות</h3>
+                        <p>התחלה מושלמת ויוקרתית ליום המיוחד שלכם. מוזיקה חיה ומרגשת שיוצרת אווירה אלגנטית ומזמינה לאורחים.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>הופעות אינטימיות</h3>
+                        <p>ערבי ג'אז ובלוז במועדונים, ברים ואירועים פרטיים. חוויה תרבותית עמוקה בליווי יין משובח.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>אירועי חברה</h3>
+                        <p>מוזיקת רקע מתוחכמת שמעלה את הרמה של כל אירוע עסקי או השקה, בדיוק בוויב הנכון.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="gigs">
-        <h2 class="section-title">הופעות קרובות</h2>
-        <div class="gigs-list">
-            <div class="gig-item">
-                <span class="gig-info">בית העמודים, תל אביב - ג'אז ובלוז אל תוך הלילה</span>
-                <span class="gig-date">24.03.2026</span>
+        <section id="shows" class="about">
+            <div class="container">
+                <h2 class="section-title">הופעות קרובות</h2>
+                <div class="shows-list">
+                    <div class="show-item">
+                        <div class="show-date">24.03.2026</div>
+                        <div class="show-info">
+                            <h4>ערב ג'אז ויין - תל אביב</h4>
+                            <p>בר יין "הבוסתן", 21:00</p>
+                        </div>
+                    </div>
+                    <div class="show-item">
+                        <div class="show-date">02.04.2026</div>
+                        <div class="show-info">
+                            <h4>בלוז לתוך הלילה</h4>
+                            <p>מועדון ה"לבונטין", 22:30</p>
+                        </div>
+                    </div>
+                    <div class="show-item">
+                        <div class="show-date">15.04.2026</div>
+                        <div class="show-info">
+                            <h4>ג'אז בשקיעה</h4>
+                            <p>מתחם התחנה, 18:30</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="gig-item">
-                <span class="gig-info">קבלת פנים - מלון נורמן</span>
-                <span class="gig-date">02.04.2026</span>
-            </div>
-            <div class="gig-item">
-                <span class="gig-info">קפה דה סול, יפו - ערב בלוז אינטימי</span>
-                <span class="gig-date">15.04.2026</span>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact">
-        <h2 class="section-title">צרו קשר</h2>
-        <p>מעוניינים להזמין אותנו להופעה או לאירוע? אנחנו כאן לכל שאלה.</p>
-        <div style="margin-top: 30px;">
-            <p>אינסטגרם: <a href="https://www.instagram.com/gorjazz_duo/" style="color: var(--primary);">@gorjazz_duo</a></p>
-            <p>טלפון להזמנות: 050-0000000</p>
-        </div>
-    </section>
+        <section id="gallery">
+            <div class="container">
+                <h2 class="section-title">גלריה</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/gorjazz-duo.jpg" alt="GORJAZZ duo" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/gorjazz-performance.jpg" alt="הופעה חיה" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/gorjazz-duo-alt.jpg" alt="צילום הרכב" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title" style="color: white;">דברו איתנו</h2>
+                <div class="contact-form">
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="name">שם מלא</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">אימייל</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">מה תרצו לספר לנו?</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">שלחו הודעה</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <div class="social-links">
-            <a href="https://www.instagram.com/gorjazz_duo/">Instagram</a>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.instagram.com/gorjazz_duo/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+            </div>
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> GORJAZZ. כל הזכויות שמורות.</p>
         </div>
-        <p style="margin-top: 20px; color: var(--text-dim);">&copy; <script>document.write(new Date().getFullYear())</script> GORJAZZ. כל הזכויות שמורות.</p>
     </footer>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "GORJAZZ",
+      "description": "דואט ג'אז ובלוז ישראלי המשלב בין ניו יורק לתל אביב",
+      "url": "https://sarielgil.github.io/gorjazz/",
+      "image": "https://sarielgil.github.io/gorjazz/images/gorjazz-duo.jpg",
+      "sameAs": [
+        "https://www.instagram.com/gorjazz_duo/"
+      ],
+      "genre": ["Jazz", "Blues"],
+      "location": {
+        "@type": "Place",
+        "name": "Tel Aviv"
+      }
+    }
+    </script>
 </body>
 </html>
